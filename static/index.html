@@ -1,1 +1,154 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizMate</title>
+    <meta name="description" content="Generate quizzes and ask questions based on PDF content" />
+    <meta name="author" content="PDF Quiz Generator" />
+
+<link rel="stylesheet" href="/static/styles.css">    
+  </head>
+  
+  <body>
+    <div class="container">
+      <header>
+        <h1>QuizMate</h1>
+        <p>Your smartest study partner</p>
+        <div class="tabs">
+          <button class="tab-button active" data-tab="quiz-tab">Generate Quiz</button>
+          <button class="tab-button" data-tab="chat-tab">Ask Questions</button>
+        </div>
+      </header>
+
+      <main>
+        <section id="quiz-tab" class="tab-content active">
+          <div class="card" id="quiz-setup">
+            <h2>Setup Your Quiz</h2>
+            <form id="quiz-form">
+              <div class="form-group file-upload">
+                <label for="pdf-file">Upload Your PDF</label>
+                <label class="file-upload-button" for="pdf-file">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                  </svg>
+                  Choose PDF file
+                </label>
+                <input type="file" id="pdf-file" accept=".pdf" required>
+                <div class="file-info hidden">
+                  <span id="file-name">No file chosen</span>
+                  <span class="remove-file">×</span>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="topic">Topic:</label>
+                <input type="text" id="topic" placeholder="e.g., attention mechanisms" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="num-questions">Number of Questions:</label>
+                <input type="number" id="num-questions" min="1" max="50" value="5" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty" required>
+                  <option value="easy">Easy</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="hard">Hard</option>
+                </select>
+              </div>
+              
+              <button type="submit" class="button" id="generate-button">Generate Quiz</button>
+            </form>
+          </div>
+
+          <div class="card hidden" id="loading">
+            <div class="loading">
+              <div class="spinner"></div>
+              <p>Generating quiz questions...</p>
+            </div>
+          </div>
+
+          <div class="card hidden" id="quiz-container">
+            <h2>Quiz Time!</h2>
+            <div class="progress-bar">
+              <div class="progress" style="width: 0%"></div>
+            </div>
+            <div class="question-info">
+              <span id="question-number">Question 1 of 5</span>
+              <span id="score-display">Score: 0/0</span>
+            </div>
+            <div id="question-container">
+              <!-- Questions will be rendered here -->
+            </div>
+            <div class="quiz-navigation">
+              <button id="prev-btn" class="nav-button" disabled>Previous</button>
+              <button id="next-btn" class="nav-button">Next</button>
+              <button id="submit-quiz" class="button hidden">Submit Quiz</button>
+            </div>
+          </div>
+
+          <div class="card hidden" id="results-container">
+            <h2>Quiz Results</h2>
+            <div class="final-score" id="final-score"></div>
+            <div id="results-list">
+              <!-- Results will be rendered here -->
+            </div>
+            <button id="new-quiz" class="button">Start New Quiz</button>
+          </div>
+        </section>
+
+        <!-- Chat Interface Tab -->
+        <section id="chat-tab" class="tab-content">
+          <div class="card chat-container">
+            <div class="form-group">
+              <label for="chat-pdf-upload">Upload PDF to ask about:</label>
+              <label class="file-upload-button" for="chat-pdf-upload">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                Choose PDF file
+              </label>
+              <input type="file" id="chat-pdf-upload" accept=".pdf">
+              <div class="file-info hidden" id="chat-file-info">
+                <span id="chat-file-name">No file chosen</span>
+                <span class="remove-file" id="chat-remove-file">×</span>
+              </div>
+            </div>
+            
+            <div class="chat-messages" id="chat-messages">
+              <div class="message system">
+                <div class="message-content">
+                  Hello! Upload a PDF and ask me questions about it.
+                </div>
+              </div>
+            </div>
+            
+            <form class="chat-form" id="chat-form">
+              <input type="text" id="user-message" class="chat-input" placeholder="Ask a question about the PDF..." required>
+              <button type="submit" class="send-button" id="send-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M3 13h6v-2H3V1.846a.5.5 0 0 1 .741-.438l18.462 10.154a.5.5 0 0 1 0 .876L3.741 22.592A.5.5 0 0 1 3 22.154V13z"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+      
+      <footer>
+        <p>QuizMate © 2025 </p>
+      </footer>
+    </div>
+
+<script src="/static/script.js"></script>
+
+  </body>
+</html>
