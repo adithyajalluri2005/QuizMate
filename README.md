@@ -6,12 +6,12 @@
 
 ## 🚀 Features
 
-- **Dynamic Quiz Generation**: Automatically generates quizzes from a diverse question bank.
-- **User Authentication**: Secure login and registration system to track user progress.
-- **Real-time Feedback**: Immediate feedback on quiz answers to aid learning.
-- **Responsive Design**: Optimized for desktops, tablets, and mobile devices.
-- **Performance Tracking**: Monitor scores and progress over time.
-
+ ✅ PDF Upload – Users can upload any content-rich document
+ ✅ AI-Powered Q&A – Ask contextual questions and get accurate responses
+ ✅ Dynamic Quiz Generation – Create MCQs with 4 options, correct answers, and explanations
+ ✅ Difficulty Customization – Supports easy, medium, and hard quiz levels
+ ✅ Conversational Memory – Maintains history for better chat context
+ ✅ Clean REST API – Powered by FastAPI and ready for frontend integration
 ---
 
 ## 🖼️ Screenshots
