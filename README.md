@@ -85,7 +85,7 @@
     pip install -r requirements.txt
 3. Run the application:
    ```bash
-   python backend/app.py
+   uvicorn backend.main:app
 
 4. Open your browser and navigate to:
    ```bash
