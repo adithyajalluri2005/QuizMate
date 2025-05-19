@@ -4,15 +4,33 @@
 
 ---
 
-## 🚀 Features
+## ✅ Key Features
 
- ✅ PDF Upload – Users can upload any content-rich document
- ✅ AI-Powered Q&A – Ask contextual questions and get accurate responses
- ✅ Dynamic Quiz Generation – Create MCQs with 4 options, correct answers, and explanations
- ✅ Difficulty Customization – Supports easy, medium, and hard quiz levels
- ✅ Conversational Memory – Maintains history for better chat context
- ✅ Clean REST API – Powered by FastAPI and ready for frontend integration
----
+- 📄 **PDF Upload**  
+  Upload any content-rich academic or professional PDF. The system securely stores the file and prepares it for semantic search and AI interaction.
+
+- 🤖 **AI-Powered Q&A**  
+  Ask natural language questions from the uploaded document. Using **LLMs (Groq + DeepSeek LLaMA)** and **vector search**, the assistant retrieves the most relevant content and generates clear, concise answers.
+
+- 🧠 **Dynamic Quiz Generation**  
+  Automatically generate multiple-choice questions (MCQs) from a chosen topic within the PDF. Each quiz includes:
+  - 4 answer options  
+  - A correct answer  
+  - An explanation
+
+- 🎯 **Difficulty Customization**  
+  Choose the complexity of questions — **Easy**, **Medium**, or **Hard** — to match learning goals or testing depth.
+
+- 💬 **Conversational Memory**  
+  Maintains contextual history of previous questions and answers for a more natural, flowing user interaction. Ideal for follow-up questions and continuous learning sessions.
+
+- 🌐 **Clean REST API**  
+  Built using **FastAPI**, the backend exposes well-documented endpoints that are easy to consume via frontend interfaces or other services:
+  - `/upload_pdf/`  
+  - `/ask_question/`  
+  - `/generate_quiz/`  
+  - `/chat_history/`
+
 
 ## 🖼️ Screenshots
 
