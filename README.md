@@ -1,97 +1,84 @@
-QuizMate
-QuizMate is an interactive web-based quiz application designed to provide users with an engaging platform to test and enhance their knowledge across various subjects. Built using modern web technologies, QuizMate offers a seamless and responsive user experience.
+# QuizMate
 
-🚀 Features
-Dynamic Quiz Generation: Automatically generates quizzes from a diverse question bank.
+**QuizMate** is an interactive web-based quiz application designed to provide users with an engaging platform to test and enhance their knowledge across various subjects. Built using modern web technologies, QuizMate offers a seamless and responsive user experience.
 
-User Authentication: Secure login and registration system to track user progress.
+---
 
-Real-time Feedback: Immediate feedback on quiz answers to aid learning.
+## 🚀 Features
 
-Responsive Design: Optimized for desktops, tablets, and mobile devices.
+- **Dynamic Quiz Generation**: Automatically generates quizzes from a diverse question bank.
+- **User Authentication**: Secure login and registration system to track user progress.
+- **Real-time Feedback**: Immediate feedback on quiz answers to aid learning.
+- **Responsive Design**: Optimized for desktops, tablets, and mobile devices.
+- **Performance Tracking**: Monitor scores and progress over time.
 
-Performance Tracking: Monitor scores and progress over time.
+---
 
-🖼️ Screenshots
+## 🖼️ Screenshots
+
 ![quiz-1](https://github.com/user-attachments/assets/bede7357-c57a-46f0-a2ba-83889761fa30)
 ![quiz-2](https://github.com/user-attachments/assets/4caabfdb-5bb5-4a91-ba3c-9d99fff1ee3c)
 ![quiz-3](https://github.com/user-attachments/assets/f0fd461c-a374-4b76-aefc-2f294f9045e1)
 ![quiz-4](https://github.com/user-attachments/assets/d93480b3-a014-4166-8b53-11c63840baa5)
 
-🎥 Demo Video
-
-🛠️ Tech Stack
-Frontend:
-
-HTML5
-
-CSS3
-
-JavaScript
-
-Backend:
-
-Python (Flask/Django)
-
-Database:
-
-SQLite/MySQL
-
-Version Control:
-
-Git & GitHub
+---
 
 
-📁 Project Structure
-cpp
-Copy
-Edit
-QuizMate/
-├── backend/
-│   ├── app.py
-│   ├── models.py
-│   └── ...
-├── static/
-│   ├── css/
-│   ├── js/
-│   └── images/
-├── templates/
-│   ├── index.html
-│   ├── quiz.html
-│   └── ...
-├── README.md
-└── requirements.txt
+
+## 🛠️ Tech Stack
+
+### Frontend:
+- HTML5  
+- CSS3  
+- JavaScript  
+
+### Backend:
+- Python (Flask or Django)
+
+### Database:
+- SQLite / MySQL
+
+### Version Control:
+- Git & GitHub
+
+---
 
 
-🚀 Getting Started
-Prerequisites
-Python 3.x
+## 📁 Project Structure
+<pre> ``` QuizMate/ ├── backend/ │ ├── app.py │ ├── models.py │ └── ... ├── static/ │ ├── css/ │ ├── js/ │ └── images/ ├── templates/ │ ├── index.html │ ├── quiz.html │ └── ... ├── README.md └── requirements.txt ``` </pre>
 
-pip (Python package installer)
+---
 
-Installation
-Clone the repository:
+## 🚀 Getting Started
 
-bash
-Copy
-Edit
-git clone https://github.com/adithyajalluri2005/QuizMate.git
-cd QuizMate
-Install dependencies:
+### Prerequisites
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Run the application:
+- Python 3.x  
+- pip (Python package installer)
 
-bash
-Copy
-Edit
-python backend/app.py
-Access the application:
+### Installation
 
-Open your browser and navigate to http://localhost:5000
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/adithyajalluri2005/QuizMate.git
+   cd QuizMate
+2. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+3. Run the application:
+   ```bash
+   python backend/app.py
+
+4. Open your browser and navigate to:
+   ```bash
+   http://localhost:5000
+
+## 📬 Contact
+### Author: Adithya Jalluri
+
+### GitHub: adithyajalluri2005
+
+
 
 
 
