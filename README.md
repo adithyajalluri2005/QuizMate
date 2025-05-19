@@ -43,27 +43,27 @@
 
 
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
-### Frontend:
-- HTML5  
-- CSS3  
-- JavaScript  
+- **Backend**:  
+  Python, FastAPI, Typer
 
-### Backend:
-- Python (Flask or Django)
+- **AI Agents / LLMs**:  
+  Groq (DeepSeek LLaMA 70B), LangChain, Agno SDK
 
-### Database:
-- SQLite / MySQL
+- **Embeddings**:  
+  HuggingFace SentenceTransformers
 
-### Version Control:
-- Git & GitHub
+- **Vector Store**:  
+  ChromaDB
+
+- **Document Parsing**:  
+  PyPDFLoader
+
+- **Other Tools**:  
+  pydantic, python-dotenv, JSON validation
 
 ---
-
-
-## 📁 Project Structure
-<pre> ``` QuizMate/ ├── backend/ │ ├── app.py │ ├── models.py │ └── ... ├── static/ │ ├── css/ │ ├── js/ │ └── images/ ├── templates/ │ ├── index.html │ ├── quiz.html │ └── ... ├── README.md └── requirements.txt ``` </pre>
 
 ---
 
